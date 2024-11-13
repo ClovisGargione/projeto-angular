@@ -1,0 +1,51 @@
+<h2>Template</h2>
+<h3>Text interpolation</h3>
+<p>{{ name }} - {{ age }} - {{ sum(1, 2) }}</p>
+
+<hr/>
+
+<h2>Property binding</h2>
+
+<button [disabled] = "isDisabled">Button</button>
+
+<img [src] = "srcValue" [alt] = "name" [title] = "name"/>
+
+<hr/>
+
+<h2>Attribute binding</h2>
+
+<p [attr.title] = "name">Clovis</p>
+
+<hr/>
+
+<h2>Class and Style binding</h2>
+
+<p [class.background-red] = "age > 39" [class.background-blue] = "age <= 39">{{name}}</p>
+
+<p [style.text-decoration]="'underline'">{{ age }}</p>
+
+<hr/>
+
+<h2>Event binding</h2>
+<p>{{age}}</p>
+<button (click)="sumAge()" >add</button>
+<button (click)="subAge()" >sub</button>
+<input (keydown.shift.t)="onKeyDown($event)" />
+
+<div (mousemove)="onMouseMove($event)" style="background: red; height: 300px; width: 300px; margin-top: 10px;"></div>
+
+<hr/>
+
+<h2>Two-way binding</h2>
+
+<input [(ngModel)]="name" />
+{{name}}
+
+
+<hr/>
+
+<h2>Diretivas de atributo</h2>
+
+<div [ngClass]="{'background-red': true}">Classes condicionais</div>
+
+<div [ngStyle]="{ color: 'green' }">Estilo dinâmico</div>
